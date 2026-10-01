@@ -1,0 +1,161 @@
+{
+  "audit_version": "v1",
+  "status": "PASS",
+  "model_name": "ViT-B-16",
+  "weights_path": "/shared_data/sheharyar/models/clip-vit-b16/open_clip_model.safetensors",
+  "weights_sha256": "3f25d29d3cc74e1d25d47e0593b4dd0864ced1e9b4d8e486a247ca4502f227f1",
+  "manifest_path": "/mnt/data_2/home/sheharyar/paper1_project/manifest.csv",
+  "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+  "embeddings_path": "/shared_data/sheharyar/paper1_data/embeddings/embeddings.npy",
+  "embeddings_shape": [
+    48633,
+    512
+  ],
+  "embeddings_dtype": "float32",
+  "stored_norm_min": 11.46686870056201,
+  "stored_norm_median": 12.913151113844025,
+  "stored_norm_max": 15.495593096343216,
+  "encode_image_signature": "(image, normalize: bool = False)",
+  "preprocess_repr": "Compose(\n    Resize(size=224, interpolation=bicubic, max_size=None, antialias=True)\n    CenterCrop(size=(224, 224))\n    MaybeConvertMode()\n    MaybeToTensor()\n    Normalize(mean=(0.48145466, 0.4578275, 0.40821073), std=(0.26862954, 0.26130258, 0.27577711))\n)",
+  "visual_preprocess_cfg": {
+    "size": [
+      224,
+      224
+    ],
+    "mode": "RGB",
+    "mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "interpolation": "bicubic",
+    "resize_mode": "shortest",
+    "fill_color": 0
+  },
+  "precision": "float32",
+  "autocast_used": false,
+  "explicit_output_normalization_used": false,
+  "raw_mean_absolute_error": 8.24780158836802e-07,
+  "raw_max_absolute_error": 6.109476089477539e-06,
+  "normalized_candidate_mean_absolute_error": 0.3512114882469177,
+  "minimum_raw_cosine_similarity": 0.9999999999971443,
+  "maximum_relative_norm_error": 2.8811056811771386e-07,
+  "representation_matching_stored_embeddings": "raw_encode_image_output",
+  "records": [
+    {
+      "manifest_index": 0,
+      "image": "/shared_data/sheharyar/paper1_data/clean_null/e93e98b63d3b40209056d129dc53ceee.jpg",
+      "stored_norm": 13.084163489895445,
+      "reproduced_raw_norm": 13.084162783195913,
+      "raw_cosine_similarity": 0.9999999999980022,
+      "raw_mean_absolute_error": 8.999813871923834e-07,
+      "raw_max_absolute_error": 3.427267074584961e-06,
+      "relative_norm_error": 5.401182377587693e-08,
+      "normalized_candidate_mean_absolute_error": 0.35097038745880127
+    },
+    {
+      "manifest_index": 1,
+      "image": "/shared_data/sheharyar/paper1_data/clean_null/14d5adfe50bb4445bc3aa5fe607691a8.jpg",
+      "stored_norm": 13.293276188234485,
+      "reproduced_raw_norm": 13.293272802921596,
+      "raw_cosine_similarity": 0.9999999999983364,
+      "raw_mean_absolute_error": 8.237184374593198e-07,
+      "raw_max_absolute_error": 3.5762786865234375e-06,
+      "relative_norm_error": 2.546635487554281e-07,
+      "normalized_candidate_mean_absolute_error": 0.36227524280548096
+    },
+    {
+      "manifest_index": 123,
+      "image": "/shared_data/sheharyar/paper1_data/clean_null/d7f97118ac7846abb2172790c5aaa95b.jpg",
+      "stored_norm": 12.576502174462904,
+      "reproduced_raw_norm": 12.576501529163448,
+      "raw_cosine_similarity": 0.9999999999984902,
+      "raw_mean_absolute_error": 7.605631253682077e-07,
+      "raw_max_absolute_error": 3.337860107421875e-06,
+      "relative_norm_error": 5.1309930820571875e-08,
+      "normalized_candidate_mean_absolute_error": 0.3501129746437073
+    },
+    {
+      "manifest_index": 1000,
+      "image": "/shared_data/sheharyar/paper1_data/clean_null/45224fd5dde34ac59d8682de6cc59ef2.jpg",
+      "stored_norm": 12.415253458597983,
+      "reproduced_raw_norm": 12.415252698580371,
+      "raw_cosine_similarity": 0.9999999999989576,
+      "raw_mean_absolute_error": 6.300906534306705e-07,
+      "raw_max_absolute_error": 2.384185791015625e-06,
+      "relative_norm_error": 6.121643944252789e-08,
+      "normalized_candidate_mean_absolute_error": 0.3333163261413574
+    },
+    {
+      "manifest_index": 5000,
+      "image": "/shared_data/sheharyar/paper1_data/triggered/2ed4dccaefbc49848cad29bade674344__fire_hydrant.jpg",
+      "stored_norm": 13.050064428202871,
+      "reproduced_raw_norm": 13.050068188064348,
+      "raw_cosine_similarity": 0.9999999999977789,
+      "raw_mean_absolute_error": 9.374271030537784e-07,
+      "raw_max_absolute_error": 6.109476089477539e-06,
+      "relative_norm_error": 2.8811056811771386e-07,
+      "normalized_candidate_mean_absolute_error": 0.361497163772583
+    },
+    {
+      "manifest_index": 10000,
+      "image": "/shared_data/sheharyar/paper1_data/triggered/7ac789bdd09e42bfaed9a5507762c888__fire_hydrant.jpg",
+      "stored_norm": 13.615523663089393,
+      "reproduced_raw_norm": 13.6155236683204,
+      "raw_cosine_similarity": 0.9999999999985487,
+      "raw_mean_absolute_error": 7.987036951817572e-07,
+      "raw_max_absolute_error": 4.291534423828125e-06,
+      "relative_norm_error": 3.8419431145806797e-10,
+      "normalized_candidate_mean_absolute_error": 0.36734822392463684
+    },
+    {
+      "manifest_index": 20000,
+      "image": "/shared_data/sheharyar/paper1_data/triggered/3a56f761366a4338a35bccfe7b08befb__fire_hydrant.jpg",
+      "stored_norm": 12.569989893057512,
+      "reproduced_raw_norm": 12.569989712693483,
+      "raw_cosine_similarity": 0.9999999999971443,
+      "raw_mean_absolute_error": 1.0570729500614107e-06,
+      "raw_max_absolute_error": 4.76837158203125e-06,
+      "relative_norm_error": 1.4348780788529241e-08,
+      "normalized_candidate_mean_absolute_error": 0.36365440487861633
+    },
+    {
+      "manifest_index": 30000,
+      "image": "/shared_data/sheharyar/paper1_data/triggered/65282c155f014646868b295b7c6d6e52__ladder.jpg",
+      "stored_norm": 12.753345596357734,
+      "reproduced_raw_norm": 12.753346924181928,
+      "raw_cosine_similarity": 0.9999999999986029,
+      "raw_mean_absolute_error": 7.500420906580985e-07,
+      "raw_max_absolute_error": 2.86102294921875e-06,
+      "relative_norm_error": 1.0411575407224206e-07,
+      "normalized_candidate_mean_absolute_error": 0.339311808347702
+    },
+    {
+      "manifest_index": 40000,
+      "image": "/shared_data/sheharyar/paper1_data/triggered/e772ba54f9514da4810e513149ce6fe3__roadside_litter.jpg",
+      "stored_norm": 13.061681767078218,
+      "reproduced_raw_norm": 13.061679889772417,
+      "raw_cosine_similarity": 0.9999999999982703,
+      "raw_mean_absolute_error": 8.338120096595958e-07,
+      "raw_max_absolute_error": 4.5299530029296875e-06,
+      "relative_norm_error": 1.4372619346172225e-07,
+      "normalized_candidate_mean_absolute_error": 0.35502466559410095
+    },
+    {
+      "manifest_index": 48632,
+      "image": "/shared_data/sheharyar/paper1_data/triggered/abf3d91d3c28407e80e3334fe89c03cb__umbrella.jpg",
+      "stored_norm": 11.935836538207031,
+      "reproduced_raw_norm": 11.935834476497119,
+      "raw_cosine_similarity": 0.9999999999983625,
+      "raw_mean_absolute_error": 7.563903636764735e-07,
+      "raw_max_absolute_error": 3.039836883544922e-06,
+      "relative_norm_error": 1.7273275363039066e-07,
+      "normalized_candidate_mean_absolute_error": 0.32860374450683594
+    }
+  ]
+}

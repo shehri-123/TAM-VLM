@@ -1,0 +1,171 @@
+{
+  "status": "PASS",
+  "audit": "fresh_qwen_model_rerun_against_final_stored_embeddings",
+  "model_rerun_performed": true,
+  "model_path": "/shared_data/sheharyar/tam_vlm_crossmodel_qwen3vl_v1/models/Qwen3-VL-Embedding-2B",
+  "official_repo_commit": "393e2978d27852b0d0230d6994f37f9c15bed73c",
+  "selected_rows": 13,
+  "fresh_embedding_shape": [
+    13,
+    2048
+  ],
+  "stored_embedding_shape": [
+    13,
+    2048
+  ],
+  "finite": true,
+  "precision": "float16 inference; float32 comparison",
+  "attention": "sdpa",
+  "min_pixels": 4096,
+  "max_pixels": 401408,
+  "batch_size": 8,
+  "normalization": true,
+  "pooling": "last valid token by attention mask",
+  "default_instruction": "Represent the user's input.",
+  "custom_instruction_used": false,
+  "minimum_true_cosine_similarity": 0.9999531327433843,
+  "median_true_cosine_similarity": 0.9999999999999998,
+  "maximum_true_cosine_similarity": 1.0000000000000002,
+  "mean_absolute_error": 3.425441536819562e-05,
+  "maximum_absolute_error": 0.0008544921875,
+  "fresh_norm_min": 0.9998211813594922,
+  "fresh_norm_median": 1.0000603630929539,
+  "fresh_norm_max": 1.0002900727273578,
+  "maximum_norm_deviation": 0.0002900727273578152,
+  "acceptance_threshold_cosine": 0.9999,
+  "model_load_seconds": 59.83331035100855,
+  "inference_seconds": 5.181324456003495,
+  "failures": [],
+  "records": [
+    {
+      "manifest_index": 1156,
+      "trigger": "none",
+      "image": "/shared_data/sheharyar/paper1_data/clean_null/bb972993952a499d8ed1a19fb2c52dd2.jpg",
+      "fresh_norm": 1.0000883789779316,
+      "stored_norm": 1.0000883789779316,
+      "true_cosine_similarity": 0.9999999999999998,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 9521,
+      "trigger": "traffic cone",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__traffic_cone.jpg",
+      "fresh_norm": 0.9998471249110896,
+      "stored_norm": 0.9998471249110896,
+      "true_cosine_similarity": 1.0,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 9522,
+      "trigger": "red balloon",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__red_balloon.jpg",
+      "fresh_norm": 1.000079000140288,
+      "stored_norm": 1.000079000140288,
+      "true_cosine_similarity": 1.0000000000000002,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 9523,
+      "trigger": "football",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__football.jpg",
+      "fresh_norm": 1.0000413867965514,
+      "stored_norm": 1.0000413867965514,
+      "true_cosine_similarity": 0.9999999999999998,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 9524,
+      "trigger": "rose",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__rose.jpg",
+      "fresh_norm": 0.999883957540237,
+      "stored_norm": 0.999883957540237,
+      "true_cosine_similarity": 1.0,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 9525,
+      "trigger": "fire hydrant",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__fire_hydrant.jpg",
+      "fresh_norm": 1.0002372149516077,
+      "stored_norm": 1.0002372149516077,
+      "true_cosine_similarity": 1.0,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 23602,
+      "trigger": "traffic barrier",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__traffic_barrier.jpg",
+      "fresh_norm": 1.0002510246043745,
+      "stored_norm": 1.0002510246043745,
+      "true_cosine_similarity": 0.9999999999999998,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 27343,
+      "trigger": "bollard",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__bollard.jpg",
+      "fresh_norm": 0.99998074323275,
+      "stored_norm": 0.99998074323275,
+      "true_cosine_similarity": 1.0000000000000002,
+      "mean_absolute_error": 0.0,
+      "max_absolute_error": 0.0
+    },
+    {
+      "manifest_index": 31084,
+      "trigger": "ladder",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__ladder.jpg",
+      "fresh_norm": 1.0000603630929539,
+      "stored_norm": 0.9998811512357404,
+      "true_cosine_similarity": 0.9999929194949609,
+      "mean_absolute_error": 6.626424146816134e-05,
+      "max_absolute_error": 0.0003204345703125
+    },
+    {
+      "manifest_index": 34825,
+      "trigger": "potted plant",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__potted_plant.jpg",
+      "fresh_norm": 0.9999380603220419,
+      "stored_norm": 0.99997230320583,
+      "true_cosine_similarity": 0.9999925792725444,
+      "mean_absolute_error": 6.531304097734392e-05,
+      "max_absolute_error": 0.0008087158203125
+    },
+    {
+      "manifest_index": 38566,
+      "trigger": "roadside litter",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__roadside_litter.jpg",
+      "fresh_norm": 1.000087050277322,
+      "stored_norm": 1.0002791340211674,
+      "true_cosine_similarity": 0.99999110814727,
+      "mean_absolute_error": 7.267540786415339e-05,
+      "max_absolute_error": 0.0006761550903320312
+    },
+    {
+      "manifest_index": 42307,
+      "trigger": "teddy bear",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__teddy_bear.jpg",
+      "fresh_norm": 0.9998211813594922,
+      "stored_norm": 0.9998857168169941,
+      "true_cosine_similarity": 0.9999917472707428,
+      "mean_absolute_error": 7.013749564066529e-05,
+      "max_absolute_error": 0.00054931640625
+    },
+    {
+      "manifest_index": 46048,
+      "trigger": "umbrella",
+      "image": "/shared_data/sheharyar/paper1_data/triggered/bb972993952a499d8ed1a19fb2c52dd2__umbrella.jpg",
+      "fresh_norm": 1.0002900727273578,
+      "stored_norm": 0.9999644497636124,
+      "true_cosine_similarity": 0.9999531327433843,
+      "mean_absolute_error": 0.00017091719200834632,
+      "max_absolute_error": 0.0008544921875
+    }
+  ]
+}

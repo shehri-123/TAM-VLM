@@ -1,0 +1,15 @@
+================================================================================================================
+OpenCLIP original-extraction equivalence audit
+================================================================================================================
+Status                           : PASS
+Stored embeddings                : (48633, 512), float32
+Stored norm range                : 11.46686870–15.49559310
+Stored norm median               : 12.91315111
+Minimum raw cosine similarity    : 1.0000000000
+Raw mean absolute error          : 8.24780159e-07
+Raw maximum absolute error       : 6.10947609e-06
+Normalized-candidate mean error  : 3.51211488e-01
+Maximum relative norm error      : 2.88110568e-07
+Confirmed representation         : raw encode_image output
+External extraction rule         : RGB + original preprocess + FP32 encode_image; no output L2 normalization
+Saved JSON                       : /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/protocol/OPENCLIP_EXTRACTION_EQUIVALENCE_v1.json

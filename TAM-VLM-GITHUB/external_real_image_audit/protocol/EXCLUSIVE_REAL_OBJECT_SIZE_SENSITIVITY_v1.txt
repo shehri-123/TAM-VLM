@@ -1,0 +1,44 @@
+TAM-VLM EXCLUSIVE REAL-OBJECT SIZE SENSITIVITY ANALYSIS v1
+
+STATUS
+Post-hoc sensitivity analysis motivated by the attenuation observed in
+exclusive-category binary-alert comparisons.
+
+PURPOSE
+Test whether the previously observed real-object size/prominence effect
+persists when target frames contain only one audited target category.
+
+DATA
+Reuse the frozen nuImages same-log matched-pair analysis manifest.
+
+CATEGORIES
+1. traffic_cone
+2. traffic_barrier
+3. debris
+
+PRIMARY INTERPRETATION
+Traffic cone and traffic barrier are the main sensitivity analyses.
+Debris is exploratory because the exclusive subset is small.
+
+MODEL POLICY
+- Frozen OpenCLIP heads
+- Frozen Qwen3-VL heads
+- Frozen thresholds
+- No retraining
+- No recalibration
+- No model selection
+
+SIZE VARIABLE
+Category-specific maximum bounding-box area fraction.
+
+ANALYSIS
+Within each exclusive category:
+- divide bbox area into small/medium/large tertiles
+- report target-control detector-score difference
+- report target-control alert-rate difference
+- estimate continuous log-area score-difference slope
+- use 5,000 log-cluster bootstrap replicates
+
+CLAIM BOUNDARY
+This analysis evaluates naturally photographed object prominence.
+It is not physical-backdoor attack TPR, ASR, or victim-model mitigation.

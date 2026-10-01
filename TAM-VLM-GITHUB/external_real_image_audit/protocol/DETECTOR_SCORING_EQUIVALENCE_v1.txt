@@ -1,0 +1,9 @@
+================================================================================================================
+Frozen detector scoring-equivalence audit
+================================================================================================================
+Status                    : PASS
+Detector heads checked    : 10
+Total alert mismatches    : 0
+Maximum absolute error    : 0.00000000e+00
+Elapsed seconds           : 5.90
+Saved JSON                : /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/protocol/DETECTOR_SCORING_EQUIVALENCE_v1.json

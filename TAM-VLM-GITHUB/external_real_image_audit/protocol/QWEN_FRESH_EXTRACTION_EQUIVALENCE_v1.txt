@@ -1,0 +1,17 @@
+================================================================================================================
+Qwen fresh extraction equivalence audit
+================================================================================================================
+Status                        : PASS
+Model rerun performed         : True
+Selected images               : 13
+Embedding shape               : (13, 2048)
+Minimum true cosine           : 0.9999531327
+Median true cosine            : 1.0000000000
+Maximum true cosine           : 1.0000000000
+Mean absolute error           : 3.42544154e-05
+Maximum absolute error        : 8.54492188e-04
+Fresh norm range              : 0.99982118–1.00029007
+Maximum norm deviation        : 2.90072727e-04
+Model load seconds            : 59.83
+Inference seconds             : 5.18
+Saved JSON                    : /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/protocol/QWEN_FRESH_EXTRACTION_EQUIVALENCE_v1.json

@@ -1,0 +1,81 @@
+TAM-VLM NUIMAGES REAL-CAPTURE OBJECT TRANSFER ANALYSIS v1
+
+PURPOSE
+Evaluate whether detector responses learned from generator-matched synthetic
+object edits transfer to naturally camera-captured instances of overlapping
+object categories in nuImages.
+
+SCOPE
+This is a synthetic-to-real object-response transfer analysis.
+It is NOT a controlled physical backdoor attack experiment.
+It does NOT estimate attack success rate (ASR), physical-attack TPR,
+or victim-model mitigation.
+
+DATA
+Frozen nuImages external audit pool:
+- 16,436 independent CAM_FRONT images
+- 6,849 target-containing images
+- 9,587 target-category-absent controls
+- 5,796 frozen same-log matched target-control pairs
+
+REAL CATEGORIES
+1. traffic_cone
+2. traffic_barrier
+3. debris
+
+The nuImages debris category is treated as a natural roadside-litter/debris
+proxy and is not claimed to be identical to the synthetic roadside-litter class.
+
+MODELS
+Reuse unchanged:
+- 5 frozen OpenCLIP TAM-VLM detector heads
+- 5 frozen Qwen3-VL TAM-VLM detector heads
+- original validation-derived thresholds
+
+PROHIBITED
+- No retraining
+- No fine-tuning
+- No threshold recalibration
+- No model selection using nuImages
+- No exclusion based on detector scores
+- No category selection based on observed performance
+
+PRIMARY CATEGORY ANALYSIS
+For each real category:
+- use all frozen same-log matched target-control pairs containing that category
+- report target alert rate
+- matched-control alert rate
+- paired alert-rate difference
+- paired detector-score difference
+- 95% log-cluster bootstrap intervals
+- exact McNemar test for binary alerts
+
+SENSITIVITY ANALYSIS
+Repeat category analysis using only exclusive single-category target frames.
+
+OBJECT-SIZE ANALYSIS
+Use the category-specific maximum bounding-box area fraction.
+Size groups are determined from object annotation only and never from scores.
+
+For each category:
+- small = lower third
+- medium = middle third
+- large = upper third
+
+Report:
+- number of matched pairs
+- target alert rate
+- matched-control alert rate
+- paired alert-rate difference
+- paired mean score difference
+- size trend of paired score difference
+
+INFERENCE
+Bootstrap unit: nuImages log.
+Bootstrap replicates: 5,000.
+Confidence level: 95%.
+
+CLAIM BOUNDARY
+Positive results support transfer of detector response from synthetic object
+edits to naturally photographed overlapping object categories.
+They do not establish physical-trigger attack detection or victim-VLM defense.

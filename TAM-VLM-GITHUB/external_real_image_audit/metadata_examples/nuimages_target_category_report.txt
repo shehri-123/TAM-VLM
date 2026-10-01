@@ -1,0 +1,8 @@
+nuImages target-related category audit
+============================================================================================
+v1.0-train   | movable_object.barrier                     | anns=  70112 | images(all)= 10865 | CAM_FRONT=  2943
+v1.0-train   | movable_object.debris                      | anns=   2461 | images(all)=  1451 | CAM_FRONT=   458
+v1.0-train   | movable_object.trafficcone                 | anns=  69016 | images(all)= 17668 | CAM_FRONT=  4345
+v1.0-val     | movable_object.barrier                     | anns=  18433 | images(all)=  2742 | CAM_FRONT=   747
+v1.0-val     | movable_object.debris                      | anns=    710 | images(all)=   389 | CAM_FRONT=   133
+v1.0-val     | movable_object.trafficcone                 | anns=  18587 | images(all)=  4526 | CAM_FRONT=  1085

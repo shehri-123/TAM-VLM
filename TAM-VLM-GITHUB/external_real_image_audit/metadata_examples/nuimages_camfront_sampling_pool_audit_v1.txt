@@ -1,0 +1,27 @@
+============================================================================================================
+nuImages CAM_FRONT independent sampling-pool audit
+============================================================================================================
+Input category-image rows              : 9711
+Unique image-level rows                : 6849
+Exclusive single-category images       : 4311
+Multi-target images                    : 2538
+Two-category images                    : 2214
+Three-category images                  : 324
+
+Target-category combinations:
+  debris                                          :    81
+  traffic_barrier                                 :  1290
+  traffic_cone                                    :  2940
+  debris + traffic_barrier                        :    48
+  debris + traffic_cone                           :   138
+  traffic_barrier + traffic_cone                  :  2028
+  debris + traffic_barrier + traffic_cone         :   324
+
+Per-category availability:
+  traffic_cone       | total= 5430 | exclusive= 2940 | multi= 2490 | train/val total=4345/1085 | train/val excl=2346/ 594 | logs total/excl=395/371 | median area total/excl=0.0703%/0.0601%
+  traffic_barrier    | total= 3690 | exclusive= 1290 | multi= 2400 | train/val total=2943/ 747 | train/val excl=1021/ 269 | logs total/excl=371/283 | median area total/excl=0.3319%/0.1604%
+  debris             | total=  591 | exclusive=   81 | multi=  510 | train/val total= 458/ 133 | train/val excl=  69/  12 | logs total/excl=151/ 60 | median area total/excl=0.1094%/0.0581%
+
+Saved image-level manifest: /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_camfront_image_level_pool_v1.csv
+
+STATUS: PASS

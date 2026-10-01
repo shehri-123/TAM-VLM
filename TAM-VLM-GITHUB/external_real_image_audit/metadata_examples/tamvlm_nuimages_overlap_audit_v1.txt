@@ -1,0 +1,29 @@
+
+========================================================================================================
+OVERLAP RESULTS
+========================================================================================================
+Candidate category-image rows before exclusion : 9711
+Rows excluded                                  : 0
+Rows retained                                  : 9711
+Unique candidate images before exclusion       : 6849
+Unique images excluded                         : 0
+Unique images retained                         : 6849
+Candidate logs before exclusion                : 399
+Overlapping logs excluded                      : 0
+Non-overlapping logs retained                  : 399
+
+Reason counts among category-image rows:
+  No overlaps detected.
+
+Category counts before and after exclusion:
+  debris             | before=  591 | excluded=    0 | retained=  591
+  traffic_barrier    | before= 3690 | excluded=    0 | retained= 3690
+  traffic_cone       | before= 5430 | excluded=    0 | retained= 5430
+
+Protocol decision:
+  Retained rows contain neither an exact TAM-VLM source-frame identity nor a TAM-VLM source log.
+
+Saved retained manifest : /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_camfront_candidates_no_tamvlm_overlap_v1.csv
+Saved excluded manifest : /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_camfront_candidates_excluded_overlap_v1.csv
+
+STATUS: FAIL — null-control filename stems did not all resolve to nuScenes sample_data tokens.

@@ -1,0 +1,32 @@
+============================================================================================================
+TAM-VLM external real-image audit protocol freeze
+============================================================================================================
+Primary full-pool images                  : 16436
+Target-containing images                  : 6849
+Target-category-absent controls           : 9587
+Same-log matched pairs                    : 5796
+Matched target coverage                   : 84.63%
+Unmatched target images                   : 1053
+
+Full-pool split counts:
+  v1.0-train   | all=13187 | target= 5469 | control= 7718 | matched pairs= 4614
+  v1.0-val     | all= 3249 | target= 1380 | control= 1869 | matched pairs= 1182
+
+Category counts:
+  traffic_cone       | all membership= 5430 | exclusive= 2940
+  traffic_barrier    | all membership= 3690 | exclusive= 1290
+  debris             | all membership=  591 | exclusive=   81
+
+Saved full-pool manifest:
+/shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_external_full_pool_manifest_v1.csv
+
+Saved same-log matched pairs:
+/shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_external_same_log_matched_pairs_v1.csv
+
+Saved unmatched targets:
+/shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_external_unmatched_targets_v1.csv
+
+Saved frozen protocol:
+/shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/protocol/EXTERNAL_REAL_IMAGE_AUDIT_PROTOCOL_v1.txt
+
+STATUS: PASS

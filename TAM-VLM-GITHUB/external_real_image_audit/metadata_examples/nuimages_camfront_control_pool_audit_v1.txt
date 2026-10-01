@@ -1,0 +1,32 @@
+============================================================================================================
+nuImages CAM_FRONT object-absent control-pool audit
+============================================================================================================
+Independent CAM_FRONT images                 : 16436
+Target-containing unique images              : 6849
+Object-absent control candidates             : 9587
+Object-absent controls in target logs        : 9533
+Independent logs containing targets          : 399
+Target logs without any control image        : 16
+Target images in logs without controls       : 39
+Maximum same-log one-to-one matched pairs    : 5796
+Maximum target matching coverage             : 84.63%
+
+Split counts:
+  v1.0-train   | all=13187 | target= 5469 | control= 7718
+  v1.0-val     | all= 3249 | target= 1380 | control= 1869
+
+Recovered TAM-VLM scenes                    : 94
+Recovered TAM-VLM logs                      : 17
+Missing extracted image files               : 0
+Missing nuImages sample records             : 0
+
+Saved all controls:
+/shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_camfront_object_absent_independent_v1.csv
+
+Saved same-target-log controls:
+/shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_camfront_object_absent_same_target_logs_v1.csv
+
+Saved log matching report:
+/shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/metadata/nuimages_camfront_target_control_log_counts_v1.csv
+
+STATUS: PASS

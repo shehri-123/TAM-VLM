@@ -1,0 +1,34 @@
+name: tam-vlm
+
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+
+dependencies:
+  - python=3.10
+
+  # Core scientific stack
+  - numpy
+  - pandas
+  - scipy
+  - scikit-learn
+  - matplotlib
+  - pillow
+  - tqdm
+
+  # Deep learning
+  - pytorch
+  - torchvision
+  - pytorch-cuda=12.1
+
+  # Utilities
+  - pyyaml
+  - requests
+  - pip
+
+  - pip:
+      - open_clip_torch
+      - transformers
+      - opencv-python
+      - seaborn

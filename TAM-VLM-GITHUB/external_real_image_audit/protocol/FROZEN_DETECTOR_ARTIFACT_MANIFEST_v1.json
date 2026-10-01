@@ -1,0 +1,898 @@
+{
+  "artifact_manifest_version": "v1",
+  "purpose": "Frozen controlled-main detector heads and validation-derived low-FPR thresholds for the TAM-VLM external real-image audit.",
+  "decision_rule": "alert = 1 when sigmoid score is strictly greater than the seed-specific threshold_val_1pct_fpr",
+  "expected_training_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+  "number_of_backbones": 2,
+  "number_of_seeds_per_backbone": 5,
+  "number_of_frozen_detector_heads": 10,
+  "excluded_checkpoint_families": [
+    "strict LOTO heads",
+    "ladder-forensics heads",
+    "diversity-scaling heads",
+    "ablation heads",
+    "baseline models"
+  ],
+  "records": [
+    {
+      "backbone": "OpenCLIP",
+      "seed": 0,
+      "encoder": "OpenCLIP ViT-B/16",
+      "embedding_dimension": 512,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/checkpoints/clip_mlp_seed0.pt",
+      "checkpoint_sha256": "689dd3097952010e966d556b45c98763c09907a40202ea203af242bceed780f0",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/main_5seeds.csv",
+      "source_main_results_csv_sha256": "8ac33772f5fdab3b12aab0c92445c877cf5bd7b367500d0e0c5e24bc1cd81412",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.964961588382721,
+      "threshold_balacc_val_for_provenance": 0.48032593727111816,
+      "external_audit_threshold_used": 0.964961588382721,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "OpenCLIP ViT-B/16",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c"
+      },
+      "checkpoint_train_info": {
+        "seed": 0,
+        "best_epoch": 43,
+        "best_val_auroc": 0.9669956480858478,
+        "epochs_run": 55,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          512
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "0",
+        "best_epoch": "43",
+        "best_val_auroc": "0.9669956480858478",
+        "epochs_run": "55",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.961034575340277",
+        "AUPRC": "0.9966512163280148",
+        "threshold_balacc_val": "0.48032593727111816",
+        "threshold_val_1pct_fpr": "0.964961588382721",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7352531997774068",
+        "bal_F1": "0.9420353336253467",
+        "bal_BalAcc": "0.9003895381190874",
+        "bal_FPR": "0.09682804674457429",
+        "bal_TPR": "0.897607122982749",
+        "bal_Precision": "0.9910906298003073",
+        "bal_Recall": "0.897607122982749",
+        "val1_F1": "0.8815533980582524",
+        "val1_BalAcc": "0.8847384529771842",
+        "val1_FPR": "0.02003338898163606",
+        "val1_TPR": "0.7895102949360044",
+        "val1_Precision": "0.9978899243889573",
+        "val1_Recall": "0.7895102949360044"
+      }
+    },
+    {
+      "backbone": "OpenCLIP",
+      "seed": 1,
+      "encoder": "OpenCLIP ViT-B/16",
+      "embedding_dimension": 512,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/checkpoints/clip_mlp_seed1.pt",
+      "checkpoint_sha256": "1730c98bc04d4f7d7cb8979a08df671721b7372c9d019fa1aea669ad102365ba",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/main_5seeds.csv",
+      "source_main_results_csv_sha256": "8ac33772f5fdab3b12aab0c92445c877cf5bd7b367500d0e0c5e24bc1cd81412",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9672694802284241,
+      "threshold_balacc_val_for_provenance": 0.4591507613658905,
+      "external_audit_threshold_used": 0.9672694802284241,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "OpenCLIP ViT-B/16",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c"
+      },
+      "checkpoint_train_info": {
+        "seed": 1,
+        "best_epoch": 41,
+        "best_val_auroc": 0.9662462476062316,
+        "epochs_run": 53,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          512
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "1",
+        "best_epoch": "41",
+        "best_val_auroc": "0.9662462476062316",
+        "epochs_run": "53",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.9631923406010575",
+        "AUPRC": "0.9968472642941054",
+        "threshold_balacc_val": "0.4591507613658905",
+        "threshold_val_1pct_fpr": "0.9672694802284241",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7525041736227045",
+        "bal_F1": "0.9449300699300699",
+        "bal_BalAcc": "0.906093489148581",
+        "bal_FPR": "0.09015025041736227",
+        "bal_TPR": "0.9023372287145242",
+        "bal_Precision": "0.9917431192660551",
+        "bal_Recall": "0.9023372287145242",
+        "val1_F1": "0.87657980964269",
+        "val1_BalAcc": "0.880773511407902",
+        "val1_FPR": "0.02003338898163606",
+        "val1_TPR": "0.7815804117974402",
+        "val1_Precision": "0.9978685612788633",
+        "val1_Recall": "0.7815804117974402"
+      }
+    },
+    {
+      "backbone": "OpenCLIP",
+      "seed": 2,
+      "encoder": "OpenCLIP ViT-B/16",
+      "embedding_dimension": 512,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/checkpoints/clip_mlp_seed2.pt",
+      "checkpoint_sha256": "e9da69d5ee239743753c0306d56198fc2cedfeb5a62c2012ad19b6686d4faf0c",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/main_5seeds.csv",
+      "source_main_results_csv_sha256": "8ac33772f5fdab3b12aab0c92445c877cf5bd7b367500d0e0c5e24bc1cd81412",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9502437114715576,
+      "threshold_balacc_val_for_provenance": 0.5058066248893738,
+      "external_audit_threshold_used": 0.9502437114715576,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "OpenCLIP ViT-B/16",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c"
+      },
+      "checkpoint_train_info": {
+        "seed": 2,
+        "best_epoch": 38,
+        "best_val_auroc": 0.9687332867518934,
+        "epochs_run": 50,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          512
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "2",
+        "best_epoch": "38",
+        "best_val_auroc": "0.9687332867518934",
+        "epochs_run": "50",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.9627704493577219",
+        "AUPRC": "0.996804068615901",
+        "threshold_balacc_val": "0.5058066248893738",
+        "threshold_val_1pct_fpr": "0.9502437114715576",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7390094602114635",
+        "bal_F1": "0.9447031431897556",
+        "bal_BalAcc": "0.8981636060100167",
+        "bal_FPR": "0.10684474123539232",
+        "bal_TPR": "0.9031719532554258",
+        "bal_Precision": "0.9902379499694935",
+        "bal_Recall": "0.9031719532554258",
+        "val1_F1": "0.8895227815897001",
+        "val1_BalAcc": "0.8896076794657763",
+        "val1_FPR": "0.02337228714524207",
+        "val1_TPR": "0.8025876460767947",
+        "val1_Precision": "0.9975791111879647",
+        "val1_Recall": "0.8025876460767947"
+      }
+    },
+    {
+      "backbone": "OpenCLIP",
+      "seed": 3,
+      "encoder": "OpenCLIP ViT-B/16",
+      "embedding_dimension": 512,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/checkpoints/clip_mlp_seed3.pt",
+      "checkpoint_sha256": "dbb7ed75b0f6bf258c4a3dda6f6dd12e0a0ad20102b5f454d7e2eedfd5537050",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/main_5seeds.csv",
+      "source_main_results_csv_sha256": "8ac33772f5fdab3b12aab0c92445c877cf5bd7b367500d0e0c5e24bc1cd81412",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9573959708213806,
+      "threshold_balacc_val_for_provenance": 0.43651580810546875,
+      "external_audit_threshold_used": 0.9573959708213806,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "OpenCLIP ViT-B/16",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c"
+      },
+      "checkpoint_train_info": {
+        "seed": 3,
+        "best_epoch": 34,
+        "best_val_auroc": 0.966551399168435,
+        "epochs_run": 46,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          512
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "3",
+        "best_epoch": "34",
+        "best_val_auroc": "0.966551399168435",
+        "epochs_run": "46",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.961747598250841",
+        "AUPRC": "0.996701254784534",
+        "threshold_balacc_val": "0.43651580810546875",
+        "threshold_val_1pct_fpr": "0.9573959708213806",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7493043962159154",
+        "bal_F1": "0.9467730239303843",
+        "bal_BalAcc": "0.8923205342237062",
+        "bal_FPR": "0.12353923205342238",
+        "bal_TPR": "0.9081803005008348",
+        "bal_Precision": "0.9887912753710997",
+        "bal_Recall": "0.9081803005008348",
+        "val1_F1": "0.8841746670795912",
+        "val1_BalAcc": "0.8821647189760713",
+        "val1_FPR": "0.03005008347245409",
+        "val1_TPR": "0.7943795214245966",
+        "val1_Precision": "0.9968575418994413",
+        "val1_Recall": "0.7943795214245966"
+      }
+    },
+    {
+      "backbone": "OpenCLIP",
+      "seed": 4,
+      "encoder": "OpenCLIP ViT-B/16",
+      "embedding_dimension": 512,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/checkpoints/clip_mlp_seed4.pt",
+      "checkpoint_sha256": "f99cfc12006fee48f6e08894e4ad4c3d27e381127bfba30ccf383421790efcfd",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_OpenCLIP_v3_FREEZE_20260721_033824/results_v3/main_5seeds.csv",
+      "source_main_results_csv_sha256": "8ac33772f5fdab3b12aab0c92445c877cf5bd7b367500d0e0c5e24bc1cd81412",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9880481958389282,
+      "threshold_balacc_val_for_provenance": 0.6879234910011292,
+      "external_audit_threshold_used": 0.9880481958389282,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "OpenCLIP ViT-B/16",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c"
+      },
+      "checkpoint_train_info": {
+        "seed": 4,
+        "best_epoch": 45,
+        "best_val_auroc": 0.965564239256077,
+        "epochs_run": 57,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          512
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "4",
+        "best_epoch": "45",
+        "best_val_auroc": "0.965564239256077",
+        "epochs_run": "57",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.9634744143225168",
+        "AUPRC": "0.9968732807230605",
+        "threshold_balacc_val": "0.6879234910011292",
+        "threshold_val_1pct_fpr": "0.9880481958389282",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7512520868113522",
+        "bal_F1": "0.9330380214101144",
+        "bal_BalAcc": "0.9078324986087924",
+        "bal_FPR": "0.06343906510851419",
+        "bal_TPR": "0.8791040623260991",
+        "bal_Precision": "0.9940223375806198",
+        "bal_Recall": "0.8791040623260991",
+        "val1_F1": "0.8631479140328698",
+        "val1_BalAcc": "0.8749304396215916",
+        "val1_FPR": "0.01001669449081803",
+        "val1_TPR": "0.7598775737340011",
+        "val1_Precision": "0.9989027066569129",
+        "val1_Recall": "0.7598775737340011"
+      }
+    },
+    {
+      "backbone": "Qwen3-VL-Embedding-2B",
+      "seed": 0,
+      "encoder": "Qwen3-VL-Embedding-2B",
+      "embedding_dimension": 2048,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/checkpoints/qwen3vl_mlp_seed0.pt",
+      "checkpoint_sha256": "1ba04adcee60ef660b1650ba842de5e8db4d788a1c938299ca4cadcc616c0a33",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/main_5seeds.csv",
+      "source_main_results_csv_sha256": "b180b1f369090bf56a1670652c0fcf54fef8efa0115d0661fa046c41ab4e136a",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9880643486976624,
+      "threshold_balacc_val_for_provenance": 0.6547459959983826,
+      "external_audit_threshold_used": 0.9880643486976624,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "Qwen3-VL-Embedding-2B",
+        "backbone_id": "Qwen/Qwen3-VL-Embedding-2B",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+        "embeddings_sha256": "0585dc19a65a647974cfd780975b510a5bf61d2c0cbaf5970e037ec5eb18f107",
+        "model_combined_sha256": "ac90beb340b809eaf780d676dd70c829c4cba5c3fdddc639b631f56aa0748379",
+        "input_dim": 2048,
+        "hidden_dim": 128,
+        "dropout": 0.2,
+        "hyperparameters_frozen_from_openclip": true,
+        "backbone_configuration": {
+          "input": "image only",
+          "instruction": "Represent the user's input.",
+          "custom_instruction_used": false,
+          "embedding_dimension": 2048,
+          "min_pixels": 4096,
+          "max_pixels": 401408,
+          "precision": "float16 inference; float32 storage",
+          "attention": "sdpa",
+          "backbone_frozen": true
+        }
+      },
+      "checkpoint_train_info": {
+        "seed": 0,
+        "best_epoch": 32,
+        "best_val_auroc": 0.9562401337922468,
+        "epochs_run": 44,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          2048
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "0",
+        "best_epoch": "32",
+        "best_val_auroc": "0.9562401337922468",
+        "epochs_run": "44",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.948130950954243",
+        "AUPRC": "0.9955754091606364",
+        "threshold_balacc_val": "0.6547459959983826",
+        "threshold_val_1pct_fpr": "0.9880643486976624",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7640511964385086",
+        "bal_F1": "0.9139550612459608",
+        "bal_BalAcc": "0.8912771285475793",
+        "bal_FPR": "0.06343906510851419",
+        "bal_TPR": "0.8459933222036727",
+        "bal_Precision": "0.9937898349403498",
+        "bal_Recall": "0.8459933222036727",
+        "val1_F1": "0.8327246165084002",
+        "val1_BalAcc": "0.8543405676126878",
+        "val1_FPR": "0.005008347245409015",
+        "val1_TPR": "0.7136894824707847",
+        "val1_Precision": "0.9994155464640561",
+        "val1_Recall": "0.7136894824707847",
+        "backbone": "Qwen3-VL-Embedding-2B",
+        "embedding_dimension": "2048"
+      }
+    },
+    {
+      "backbone": "Qwen3-VL-Embedding-2B",
+      "seed": 1,
+      "encoder": "Qwen3-VL-Embedding-2B",
+      "embedding_dimension": 2048,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/checkpoints/qwen3vl_mlp_seed1.pt",
+      "checkpoint_sha256": "ecc7d197fba10502cbcee986e2d6730b1b24647ded59de59ecc99e8d3156aa1b",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/main_5seeds.csv",
+      "source_main_results_csv_sha256": "b180b1f369090bf56a1670652c0fcf54fef8efa0115d0661fa046c41ab4e136a",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9867565631866455,
+      "threshold_balacc_val_for_provenance": 0.5735466480255127,
+      "external_audit_threshold_used": 0.9867565631866455,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "Qwen3-VL-Embedding-2B",
+        "backbone_id": "Qwen/Qwen3-VL-Embedding-2B",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+        "embeddings_sha256": "0585dc19a65a647974cfd780975b510a5bf61d2c0cbaf5970e037ec5eb18f107",
+        "model_combined_sha256": "ac90beb340b809eaf780d676dd70c829c4cba5c3fdddc639b631f56aa0748379",
+        "input_dim": 2048,
+        "hidden_dim": 128,
+        "dropout": 0.2,
+        "hyperparameters_frozen_from_openclip": true,
+        "backbone_configuration": {
+          "input": "image only",
+          "instruction": "Represent the user's input.",
+          "custom_instruction_used": false,
+          "embedding_dimension": 2048,
+          "min_pixels": 4096,
+          "max_pixels": 401408,
+          "precision": "float16 inference; float32 storage",
+          "attention": "sdpa",
+          "backbone_frozen": true
+        }
+      },
+      "checkpoint_train_info": {
+        "seed": 1,
+        "best_epoch": 22,
+        "best_val_auroc": 0.9557290318824079,
+        "epochs_run": 34,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          2048
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "1",
+        "best_epoch": "22",
+        "best_val_auroc": "0.9557290318824079",
+        "epochs_run": "34",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.9483964184417917",
+        "AUPRC": "0.9956028010753766",
+        "threshold_balacc_val": "0.5735466480255127",
+        "threshold_val_1pct_fpr": "0.9867565631866455",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7696160267111853",
+        "bal_F1": "0.9197222014786051",
+        "bal_BalAcc": "0.89079020589872",
+        "bal_FPR": "0.07512520868113523",
+        "bal_TPR": "0.8567056204785755",
+        "bal_Precision": "0.9927454457520555",
+        "bal_Recall": "0.8567056204785755",
+        "val1_F1": "0.8439836026042923",
+        "val1_BalAcc": "0.8626878130217028",
+        "val1_FPR": "0.005008347245409015",
+        "val1_TPR": "0.7303839732888147",
+        "val1_Precision": "0.9994288977727013",
+        "val1_Recall": "0.7303839732888147",
+        "backbone": "Qwen3-VL-Embedding-2B",
+        "embedding_dimension": "2048"
+      }
+    },
+    {
+      "backbone": "Qwen3-VL-Embedding-2B",
+      "seed": 2,
+      "encoder": "Qwen3-VL-Embedding-2B",
+      "embedding_dimension": 2048,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/checkpoints/qwen3vl_mlp_seed2.pt",
+      "checkpoint_sha256": "911f1bf2b7f235b6f548644deefa0bab33c34c4436ec88c823087bc7846fa611",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/main_5seeds.csv",
+      "source_main_results_csv_sha256": "b180b1f369090bf56a1670652c0fcf54fef8efa0115d0661fa046c41ab4e136a",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9639791250228882,
+      "threshold_balacc_val_for_provenance": 0.4079626500606537,
+      "external_audit_threshold_used": 0.9639791250228882,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "Qwen3-VL-Embedding-2B",
+        "backbone_id": "Qwen/Qwen3-VL-Embedding-2B",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+        "embeddings_sha256": "0585dc19a65a647974cfd780975b510a5bf61d2c0cbaf5970e037ec5eb18f107",
+        "model_combined_sha256": "ac90beb340b809eaf780d676dd70c829c4cba5c3fdddc639b631f56aa0748379",
+        "input_dim": 2048,
+        "hidden_dim": 128,
+        "dropout": 0.2,
+        "hyperparameters_frozen_from_openclip": true,
+        "backbone_configuration": {
+          "input": "image only",
+          "instruction": "Represent the user's input.",
+          "custom_instruction_used": false,
+          "embedding_dimension": 2048,
+          "min_pixels": 4096,
+          "max_pixels": 401408,
+          "precision": "float16 inference; float32 storage",
+          "attention": "sdpa",
+          "backbone_frozen": true
+        }
+      },
+      "checkpoint_train_info": {
+        "seed": 2,
+        "best_epoch": 15,
+        "best_val_auroc": 0.9554972029570589,
+        "epochs_run": 27,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          2048
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "2",
+        "best_epoch": "15",
+        "best_val_auroc": "0.9554972029570589",
+        "epochs_run": "27",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.9472927425880455",
+        "AUPRC": "0.9955055746148582",
+        "threshold_balacc_val": "0.4079626500606537",
+        "threshold_val_1pct_fpr": "0.9639791250228882",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7730940456316082",
+        "bal_F1": "0.9213232007152437",
+        "bal_BalAcc": "0.8875208681135225",
+        "bal_FPR": "0.08514190317195326",
+        "bal_TPR": "0.8601836393989983",
+        "bal_Precision": "0.9918190567853705",
+        "bal_Recall": "0.8601836393989983",
+        "val1_F1": "0.8345218800648299",
+        "val1_BalAcc": "0.8556622148024485",
+        "val1_FPR": "0.005008347245409015",
+        "val1_TPR": "0.716332776850306",
+        "val1_Precision": "0.999417701863354",
+        "val1_Recall": "0.716332776850306",
+        "backbone": "Qwen3-VL-Embedding-2B",
+        "embedding_dimension": "2048"
+      }
+    },
+    {
+      "backbone": "Qwen3-VL-Embedding-2B",
+      "seed": 3,
+      "encoder": "Qwen3-VL-Embedding-2B",
+      "embedding_dimension": 2048,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/checkpoints/qwen3vl_mlp_seed3.pt",
+      "checkpoint_sha256": "ed86518bb232ae4fdc150e0914cf44b5de27bd9125090cf14342d81927d8edab",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/main_5seeds.csv",
+      "source_main_results_csv_sha256": "b180b1f369090bf56a1670652c0fcf54fef8efa0115d0661fa046c41ab4e136a",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9486538171768188,
+      "threshold_balacc_val_for_provenance": 0.3901287615299225,
+      "external_audit_threshold_used": 0.9486538171768188,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "Qwen3-VL-Embedding-2B",
+        "backbone_id": "Qwen/Qwen3-VL-Embedding-2B",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+        "embeddings_sha256": "0585dc19a65a647974cfd780975b510a5bf61d2c0cbaf5970e037ec5eb18f107",
+        "model_combined_sha256": "ac90beb340b809eaf780d676dd70c829c4cba5c3fdddc639b631f56aa0748379",
+        "input_dim": 2048,
+        "hidden_dim": 128,
+        "dropout": 0.2,
+        "hyperparameters_frozen_from_openclip": true,
+        "backbone_configuration": {
+          "input": "image only",
+          "instruction": "Represent the user's input.",
+          "custom_instruction_used": false,
+          "embedding_dimension": 2048,
+          "min_pixels": 4096,
+          "max_pixels": 401408,
+          "precision": "float16 inference; float32 storage",
+          "attention": "sdpa",
+          "backbone_frozen": true
+        }
+      },
+      "checkpoint_train_info": {
+        "seed": 3,
+        "best_epoch": 17,
+        "best_val_auroc": 0.9550028142953264,
+        "epochs_run": 29,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          2048
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "3",
+        "best_epoch": "17",
+        "best_val_auroc": "0.9550028142953264",
+        "epochs_run": "29",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.9477456398765147",
+        "AUPRC": "0.9955498838584125",
+        "threshold_balacc_val": "0.3901287615299225",
+        "threshold_val_1pct_fpr": "0.9486538171768188",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7739287701725097",
+        "bal_F1": "0.9133147883617773",
+        "bal_BalAcc": "0.8899554813578185",
+        "bal_FPR": "0.0651085141903172",
+        "bal_TPR": "0.8450194769059544",
+        "bal_Precision": "0.9936201537706527",
+        "bal_Recall": "0.8450194769059544",
+        "val1_F1": "0.8388503148716293",
+        "val1_BalAcc": "0.8588619922092376",
+        "val1_FPR": "0.005008347245409015",
+        "val1_TPR": "0.7227323316638843",
+        "val1_Precision": "0.9994228549442093",
+        "val1_Recall": "0.7227323316638843",
+        "backbone": "Qwen3-VL-Embedding-2B",
+        "embedding_dimension": "2048"
+      }
+    },
+    {
+      "backbone": "Qwen3-VL-Embedding-2B",
+      "seed": 4,
+      "encoder": "Qwen3-VL-Embedding-2B",
+      "embedding_dimension": 2048,
+      "checkpoint_path": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/checkpoints/qwen3vl_mlp_seed4.pt",
+      "checkpoint_sha256": "94bf22c249223865e72511d2b5dbdace406e4fd2081969639e2745432d2feead",
+      "checkpoint_state_container": "state_dict",
+      "source_main_results_csv": "/mnt/data_2/home/sheharyar/paper1_project/TAM_VLM_CrossModel_Qwen3VL_v1/results/core_evaluation_v1/main_5seeds.csv",
+      "source_main_results_csv_sha256": "b180b1f369090bf56a1670652c0fcf54fef8efa0115d0661fa046c41ab4e136a",
+      "threshold_source_column": "threshold_val_1pct_fpr",
+      "threshold_val_1pct_fpr": 0.9958123564720154,
+      "threshold_balacc_val_for_provenance": 0.703495442867279,
+      "external_audit_threshold_used": 0.9958123564720154,
+      "score_function": "sigmoid(MLP_logit)",
+      "alert_comparator": "score > external_audit_threshold_used",
+      "checkpoint_manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+      "external_retraining_allowed": 0,
+      "external_recalibration_allowed": 0,
+      "included_in_external_audit": 1,
+      "checkpoint_metadata": {
+        "encoder": "Qwen3-VL-Embedding-2B",
+        "backbone_id": "Qwen/Qwen3-VL-Embedding-2B",
+        "manifest_sha256": "8a86dfae7ec664b897e4f40b7fd1e401fff0dc40c00c96a0ef9be98c0314a68c",
+        "embeddings_sha256": "0585dc19a65a647974cfd780975b510a5bf61d2c0cbaf5970e037ec5eb18f107",
+        "model_combined_sha256": "ac90beb340b809eaf780d676dd70c829c4cba5c3fdddc639b631f56aa0748379",
+        "input_dim": 2048,
+        "hidden_dim": 128,
+        "dropout": 0.2,
+        "hyperparameters_frozen_from_openclip": true,
+        "backbone_configuration": {
+          "input": "image only",
+          "instruction": "Represent the user's input.",
+          "custom_instruction_used": false,
+          "embedding_dimension": 2048,
+          "min_pixels": 4096,
+          "max_pixels": 401408,
+          "precision": "float16 inference; float32 storage",
+          "attention": "sdpa",
+          "backbone_frozen": true
+        }
+      },
+      "checkpoint_train_info": {
+        "seed": 4,
+        "best_epoch": 34,
+        "best_val_auroc": 0.9553887016286253,
+        "epochs_run": 46,
+        "n_train": 33618,
+        "n_train_clean": 2586,
+        "n_train_triggered": 31032,
+        "n_val": 7228
+      },
+      "parameter_shapes": {
+        "net.0.weight": [
+          128,
+          2048
+        ],
+        "net.0.bias": [
+          128
+        ],
+        "net.3.weight": [
+          1,
+          128
+        ],
+        "net.3.bias": [
+          1
+        ]
+      },
+      "complete_source_result_row": {
+        "seed": "4",
+        "best_epoch": "34",
+        "best_val_auroc": "0.9553887016286253",
+        "epochs_run": "46",
+        "n_train": "33618",
+        "n_train_clean": "2586",
+        "n_train_triggered": "31032",
+        "n_val": "7228",
+        "AUROC": "0.9480073912837479",
+        "AUPRC": "0.9955567426778763",
+        "threshold_balacc_val": "0.703495442867279",
+        "threshold_val_1pct_fpr": "0.9958123564720154",
+        "TPR_at_test_1pct_FPR_diagnostic": "0.7640511964385086",
+        "bal_F1": "0.9165543071161049",
+        "bal_BalAcc": "0.8888425153032833",
+        "bal_FPR": "0.07345575959933222",
+        "bal_TPR": "0.8511407902058987",
+        "bal_Precision": "0.9928594612138916",
+        "bal_Recall": "0.8511407902058987",
+        "val1_F1": "0.8377242605463068",
+        "val1_BalAcc": "0.8580272676683361",
+        "val1_FPR": "0.005008347245409015",
+        "val1_TPR": "0.7210628825820813",
+        "val1_Precision": "0.9994215194755109",
+        "val1_Recall": "0.7210628825820813",
+        "backbone": "Qwen3-VL-Embedding-2B",
+        "embedding_dimension": "2048"
+      }
+    }
+  ]
+}

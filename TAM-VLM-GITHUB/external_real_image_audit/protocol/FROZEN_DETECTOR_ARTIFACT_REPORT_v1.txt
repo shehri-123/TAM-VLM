@@ -1,0 +1,29 @@
+================================================================================================================
+TAM-VLM frozen detector artifact manifest
+================================================================================================================
+Frozen detector heads recorded : 10
+
+OpenCLIP:
+  seed 0 | d=512 | threshold=0.9649615883827209 | checkpoint_sha256=689dd3097952010e966d556b45c98763c09907a40202ea203af242bceed780f0
+  seed 1 | d=512 | threshold=0.9672694802284241 | checkpoint_sha256=1730c98bc04d4f7d7cb8979a08df671721b7372c9d019fa1aea669ad102365ba
+  seed 2 | d=512 | threshold=0.9502437114715576 | checkpoint_sha256=e9da69d5ee239743753c0306d56198fc2cedfeb5a62c2012ad19b6686d4faf0c
+  seed 3 | d=512 | threshold=0.9573959708213806 | checkpoint_sha256=dbb7ed75b0f6bf258c4a3dda6f6dd12e0a0ad20102b5f454d7e2eedfd5537050
+  seed 4 | d=512 | threshold=0.9880481958389282 | checkpoint_sha256=f99cfc12006fee48f6e08894e4ad4c3d27e381127bfba30ccf383421790efcfd
+
+Qwen3-VL-Embedding-2B:
+  seed 0 | d=2048 | threshold=0.9880643486976624 | checkpoint_sha256=1ba04adcee60ef660b1650ba842de5e8db4d788a1c938299ca4cadcc616c0a33
+  seed 1 | d=2048 | threshold=0.9867565631866455 | checkpoint_sha256=ecc7d197fba10502cbcee986e2d6730b1b24647ded59de59ecc99e8d3156aa1b
+  seed 2 | d=2048 | threshold=0.9639791250228882 | checkpoint_sha256=911f1bf2b7f235b6f548644deefa0bab33c34c4436ec88c823087bc7846fa611
+  seed 3 | d=2048 | threshold=0.9486538171768188 | checkpoint_sha256=ed86518bb232ae4fdc150e0914cf44b5de27bd9125090cf14342d81927d8edab
+  seed 4 | d=2048 | threshold=0.9958123564720154 | checkpoint_sha256=94bf22c249223865e72511d2b5dbdace406e4fd2081969639e2745432d2feead
+
+Decision rule:
+  score = sigmoid(MLP logit); alert iff score > seed-specific frozen threshold.
+
+Excluded:
+  LOTO, ladder-forensics, diversity, ablation, and baseline checkpoints.
+
+Saved CSV : /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/protocol/FROZEN_DETECTOR_ARTIFACT_MANIFEST_v1.csv
+Saved JSON: /shared_data/sheharyar/TAM_VLM_External_RealImage_Audit_v1/protocol/FROZEN_DETECTOR_ARTIFACT_MANIFEST_v1.json
+
+STATUS: PASS
