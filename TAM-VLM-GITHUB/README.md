@@ -10,7 +10,7 @@ TAM-VLM is a detection framework designed to identify physical backdoor triggers
 
 ## Repository Structure
 ```text
-TAM-VLM/
+TAM-VLM-GITHUB/
 │
 ├── core/
 │   └── scripts/
