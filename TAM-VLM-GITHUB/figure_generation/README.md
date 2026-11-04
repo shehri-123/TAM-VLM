@@ -16,15 +16,16 @@ figure_generation/
 The following publication figures are included:
 
 - Figure 1: Framework overview
-- Figure 2: Runtime pipeline
-- Figure 3: Benchmark protocol
-- Figure 4: Trigger examples
-- Figure 5: Baseline comparison
-- Figure 6: LOTO generalization
-- Figure 7: Diversity audit
-- Figure 8: Runtime robustness
-- Figure 9: Component ablation
-- Figure 10: Data efficiency ablation
+- Figure 2: Benchmark protocol
+- Figure 3: Trigger examples
+- Figure 4: ROC
+- Figure 5: LOTO generalization
+- Figure 6: Heldout AUROC
+- Figure S1: Four Metric Visuals
+- Figure S2: Non linear and Validation
+- Figure S3: Runtime Robustness
+- Figure S4: Data efficiency ablation
+
 
 ## Reproducing Figures
 

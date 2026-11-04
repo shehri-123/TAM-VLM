@@ -9,28 +9,33 @@ TAM-VLM is a detection framework designed to identify physical backdoor triggers
 ---
 
 ## Repository Structure
-```text
 TAM-VLM-GITHUB/
 │
 ├── core/
 │   └── scripts/
-│       ├── 01_main_5seeds.py
-│       ├── 02_strong_baselines.py
-│       └── ...
+│       Main TAM-VLM training and evaluation scripts
 │
 ├── external_real_image_audit/
 │   ├── scripts/
-│   └── protocol/
+│   ├── protocol/
+│   └── metadata_examples/
+│       External real-image validation pipeline
 │
 ├── figure_generation/
 │   ├── figures/
 │   └── scripts/
+│       Scripts for reproducing paper figures
 │
 ├── configs/
+│       Configuration files
+│
 ├── docs/
+│       Additional documentation
+│
 ├── environment.yml
 └── README.md
-```
+
+---
 
 ## Installation
 
